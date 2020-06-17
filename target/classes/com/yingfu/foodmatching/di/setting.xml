@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Menu m = new Menu(); -->	
+	<bean id="m" class="com.yingfu.foodmatching.ui.Menu" >
+		<constructor-arg name="name" value="연어덮밥"></constructor-arg>
+		<constructor-arg name="groumet" value="덮밥"></constructor-arg>
+		<constructor-arg name="ingredient" value="연어"></constructor-arg>
+	</bean>	
+	<!-- FoodMatching fm = new FoodMatching(); -->
+	<bean id="fm" class="com.yingfu.foodmatching.entity.FoodMatching" >
+		<!-- fm.setMenu(m); -->
+		<property name="menu" ref="m"></property>	
+	</bean>
+	
+	
+	
+</beans>
